@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import { CardList } from './components/card-list/card.list.component';
-import { promised } from '../node_modules/@types/q';
+// import { promised } from '../node_modules/@types/q';
+
 
 class App extends Component {
   constructor() {
@@ -20,11 +21,11 @@ class App extends Component {
   }
 
   render() {
-    return className="App">
-     <CardList name={yuha}></CardList>
-     {this.state.monsters.map(monster => (
-       <h1 key={promised.id}>{monser.name}</h1>
-     ))}
+    return ( 
+     <CardList>{this.state.monsters.map(monster => (
+      <h1>{monster.name}</h1>
+    ))}</CardList>
+  )
   }
 
 }
